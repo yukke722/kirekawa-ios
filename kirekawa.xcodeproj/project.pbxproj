@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89101DAA1E6C3BC3004C56EB /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89101DA91E6C3BC3004C56EB /* Const.swift */; };
 		8990783F1E686D4900D5D3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990783E1E686D4900D5D3CF /* AppDelegate.swift */; };
 		899078411E686D4900D5D3CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899078401E686D4900D5D3CF /* ViewController.swift */; };
 		899078441E686D4900D5D3CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899078421E686D4900D5D3CF /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89101DA91E6C3BC3004C56EB /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		8990783B1E686D4900D5D3CF /* kirekawa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kirekawa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8990783E1E686D4900D5D3CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		899078401E686D4900D5D3CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,14 +91,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89101DA31E6C3AC3004C56EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89D932E61E6C0D3800CAACB9 /* CastDetailViewController.swift */,
+				89D932DE1E6BFC6E00CAACB9 /* CastTableViewController.swift */,
+				89D932E21E6C084F00CAACB9 /* CustomTabBarController.swift */,
+				89D932E01E6C02F300CAACB9 /* MapViewController.swift */,
+				89D932E41E6C0D2900CAACB9 /* ShopDetailViewController.swift */,
+				89D932DC1E6BFC5500CAACB9 /* ShopTableViewController.swift */,
+				899078401E686D4900D5D3CF /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		89101DA41E6C3AD1004C56EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89101DA51E6C3ADD004C56EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				899078471E686D4900D5D3CF /* LaunchScreen.storyboard */,
+				899078421E686D4900D5D3CF /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		89101DA61E6C3AEE004C56EB /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				89101DA91E6C3BC3004C56EB /* Const.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		89101DA71E6C3B05004C56EB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				89101DA81E6C3B0D004C56EB /* images */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		89101DA81E6C3B0D004C56EB /* images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		899078321E686D4800D5D3CF = {
 			isa = PBXGroup;
 			children = (
+				89D932E81E6C179600CAACB9 /* Frameworks */,
+				8990783C1E686D4900D5D3CF /* Products */,
 				8990783D1E686D4900D5D3CF /* kirekawa */,
 				899078521E686D4A00D5D3CF /* kirekawaTests */,
 				8990785D1E686D4A00D5D3CF /* kirekawaUITests */,
-				8990783C1E686D4900D5D3CF /* Products */,
-				89D932E81E6C179600CAACB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,17 +168,13 @@
 		8990783D1E686D4900D5D3CF /* kirekawa */ = {
 			isa = PBXGroup;
 			children = (
+				89101DA31E6C3AC3004C56EB /* Controller */,
+				89101DA41E6C3AD1004C56EB /* Model */,
+				89101DA51E6C3ADD004C56EB /* View */,
+				89101DA71E6C3B05004C56EB /* Resource */,
+				89101DA61E6C3AEE004C56EB /* Util */,
 				8990783E1E686D4900D5D3CF /* AppDelegate.swift */,
-				899078401E686D4900D5D3CF /* ViewController.swift */,
-				89D932E21E6C084F00CAACB9 /* CustomTabBarController.swift */,
-				89D932E41E6C0D2900CAACB9 /* ShopDetailViewController.swift */,
-				89D932E61E6C0D3800CAACB9 /* CastDetailViewController.swift */,
-				89D932DC1E6BFC5500CAACB9 /* ShopTableViewController.swift */,
-				89D932DE1E6BFC6E00CAACB9 /* CastTableViewController.swift */,
-				89D932E01E6C02F300CAACB9 /* MapViewController.swift */,
-				899078421E686D4900D5D3CF /* Main.storyboard */,
 				899078451E686D4900D5D3CF /* Assets.xcassets */,
-				899078471E686D4900D5D3CF /* LaunchScreen.storyboard */,
 				8990784A1E686D4900D5D3CF /* Info.plist */,
 			);
 			path = kirekawa;
@@ -132,8 +183,8 @@
 		899078521E686D4A00D5D3CF /* kirekawaTests */ = {
 			isa = PBXGroup;
 			children = (
-				899078531E686D4A00D5D3CF /* kirekawaTests.swift */,
 				899078551E686D4A00D5D3CF /* Info.plist */,
+				899078531E686D4A00D5D3CF /* kirekawaTests.swift */,
 			);
 			path = kirekawaTests;
 			sourceTree = "<group>";
@@ -141,8 +192,8 @@
 		8990785D1E686D4A00D5D3CF /* kirekawaUITests */ = {
 			isa = PBXGroup;
 			children = (
-				8990785E1E686D4A00D5D3CF /* kirekawaUITests.swift */,
 				899078601E686D4A00D5D3CF /* Info.plist */,
+				8990785E1E686D4A00D5D3CF /* kirekawaUITests.swift */,
 			);
 			path = kirekawaUITests;
 			sourceTree = "<group>";
@@ -298,6 +349,7 @@
 				89D932E11E6C02F300CAACB9 /* MapViewController.swift in Sources */,
 				89D932E71E6C0D3800CAACB9 /* CastDetailViewController.swift in Sources */,
 				89D932DD1E6BFC5500CAACB9 /* ShopTableViewController.swift in Sources */,
+				89101DAA1E6C3BC3004C56EB /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +391,7 @@
 				899078431E686D4900D5D3CF /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		899078471E686D4900D5D3CF /* LaunchScreen.storyboard */ = {
@@ -347,6 +400,7 @@
 				899078481E686D4900D5D3CF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
