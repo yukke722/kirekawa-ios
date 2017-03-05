@@ -14,6 +14,13 @@
 		899078491E686D4900D5D3CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899078471E686D4900D5D3CF /* LaunchScreen.storyboard */; };
 		899078541E686D4A00D5D3CF /* kirekawaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899078531E686D4A00D5D3CF /* kirekawaTests.swift */; };
 		8990785F1E686D4A00D5D3CF /* kirekawaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990785E1E686D4A00D5D3CF /* kirekawaUITests.swift */; };
+		89D932DD1E6BFC5500CAACB9 /* ShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D932DC1E6BFC5500CAACB9 /* ShopTableViewController.swift */; };
+		89D932DF1E6BFC6E00CAACB9 /* CastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D932DE1E6BFC6E00CAACB9 /* CastTableViewController.swift */; };
+		89D932E11E6C02F300CAACB9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D932E01E6C02F300CAACB9 /* MapViewController.swift */; };
+		89D932E31E6C084F00CAACB9 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D932E21E6C084F00CAACB9 /* CustomTabBarController.swift */; };
+		89D932E51E6C0D2900CAACB9 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D932E41E6C0D2900CAACB9 /* ShopDetailViewController.swift */; };
+		89D932E71E6C0D3800CAACB9 /* CastDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D932E61E6C0D3800CAACB9 /* CastDetailViewController.swift */; };
+		89D932EA1E6C179600CAACB9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D932E91E6C179600CAACB9 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		8990785A1E686D4A00D5D3CF /* kirekawaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kirekawaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8990785E1E686D4A00D5D3CF /* kirekawaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kirekawaUITests.swift; sourceTree = "<group>"; };
 		899078601E686D4A00D5D3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89D932DC1E6BFC5500CAACB9 /* ShopTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTableViewController.swift; sourceTree = "<group>"; };
+		89D932DE1E6BFC6E00CAACB9 /* CastTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastTableViewController.swift; sourceTree = "<group>"; };
+		89D932E01E6C02F300CAACB9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		89D932E21E6C084F00CAACB9 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		89D932E41E6C0D2900CAACB9 /* ShopDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
+		89D932E61E6C0D3800CAACB9 /* CastDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastDetailViewController.swift; sourceTree = "<group>"; };
+		89D932E91E6C179600CAACB9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89D932EA1E6C179600CAACB9 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,7 @@
 				899078521E686D4A00D5D3CF /* kirekawaTests */,
 				8990785D1E686D4A00D5D3CF /* kirekawaUITests */,
 				8990783C1E686D4900D5D3CF /* Products */,
+				89D932E81E6C179600CAACB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +115,12 @@
 			children = (
 				8990783E1E686D4900D5D3CF /* AppDelegate.swift */,
 				899078401E686D4900D5D3CF /* ViewController.swift */,
+				89D932E21E6C084F00CAACB9 /* CustomTabBarController.swift */,
+				89D932E41E6C0D2900CAACB9 /* ShopDetailViewController.swift */,
+				89D932E61E6C0D3800CAACB9 /* CastDetailViewController.swift */,
+				89D932DC1E6BFC5500CAACB9 /* ShopTableViewController.swift */,
+				89D932DE1E6BFC6E00CAACB9 /* CastTableViewController.swift */,
+				89D932E01E6C02F300CAACB9 /* MapViewController.swift */,
 				899078421E686D4900D5D3CF /* Main.storyboard */,
 				899078451E686D4900D5D3CF /* Assets.xcassets */,
 				899078471E686D4900D5D3CF /* LaunchScreen.storyboard */,
@@ -123,6 +145,14 @@
 				899078601E686D4A00D5D3CF /* Info.plist */,
 			);
 			path = kirekawaUITests;
+			sourceTree = "<group>";
+		};
+		89D932E81E6C179600CAACB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89D932E91E6C179600CAACB9 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +292,12 @@
 			files = (
 				899078411E686D4900D5D3CF /* ViewController.swift in Sources */,
 				8990783F1E686D4900D5D3CF /* AppDelegate.swift in Sources */,
+				89D932E31E6C084F00CAACB9 /* CustomTabBarController.swift in Sources */,
+				89D932DF1E6BFC6E00CAACB9 /* CastTableViewController.swift in Sources */,
+				89D932E51E6C0D2900CAACB9 /* ShopDetailViewController.swift in Sources */,
+				89D932E11E6C02F300CAACB9 /* MapViewController.swift in Sources */,
+				89D932E71E6C0D3800CAACB9 /* CastDetailViewController.swift in Sources */,
+				89D932DD1E6BFC5500CAACB9 /* ShopTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
