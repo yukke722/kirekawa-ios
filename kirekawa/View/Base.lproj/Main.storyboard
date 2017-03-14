@@ -93,12 +93,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Cast" id="9Nc-BK-trD"/>
+                    <connections>
+                        <segue destination="kAH-Ds-mct" kind="push" identifier="castSelect" id="om8-jl-cob"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uV7-ZU-9EZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2558" y="-582"/>
         </scene>
-        <!--Cast Detail View Controller-->
+        <!--Cast Name-->
         <scene sceneID="zUu-gr-Yqc">
             <objects>
                 <viewController storyboardIdentifier="castSelect" id="kAH-Ds-mct" customClass="CastDetailViewController" customModule="kirekawa" customModuleProvider="target" sceneMemberID="viewController">
@@ -111,15 +114,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cast Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldr-kE-fEj">
-                                <rect key="frame" x="166" y="172" width="84" height="21"/>
+                                <rect key="frame" x="145" y="208" width="84" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHh-VL-AvG">
+                                <rect key="frame" x="156" y="458" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="店舗情報"/>
+                                <connections>
+                                    <segue destination="cd2-Ms-lZG" kind="show" id="udJ-yS-i2V"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Cast Name" id="mQV-RB-gDh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9MH-DI-G0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -149,12 +161,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Shop" id="3bT-g4-IcH"/>
+                    <connections>
+                        <segue destination="cd2-Ms-lZG" kind="push" identifier="shopSelect" id="LNK-a3-Lsj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wZu-Co-IGB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2558" y="139"/>
         </scene>
-        <!--Shop Detail View Controller-->
+        <!--Shop Name-->
         <scene sceneID="mJ3-7O-O2v">
             <objects>
                 <viewController storyboardIdentifier="shopSelect" id="cd2-Ms-lZG" customClass="ShopDetailViewController" customModule="kirekawa" customModuleProvider="target" sceneMemberID="viewController">
@@ -167,26 +182,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shop Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUn-H3-r9B">
-                                <rect key="frame" x="166" y="256" width="88" height="21"/>
+                                <rect key="frame" x="143" y="220" width="88" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCf-PJ-C72">
+                                <rect key="frame" x="149" y="426" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="問い合わせ"/>
+                                <connections>
+                                    <segue destination="4k3-35-pGV" kind="push" id="IWM-sp-6I9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Shop Name" id="7hg-vg-haB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLA-PO-quV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3425" y="139"/>
+        </scene>
+        <!--Contact-->
+        <scene sceneID="TMj-8r-Woe">
+            <objects>
+                <viewController id="4k3-35-pGV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mjL-aY-MOu"/>
+                        <viewControllerLayoutGuide type="bottom" id="9dc-wm-3Pw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dc9-qO-eOY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contact" id="kil-YS-yLd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRu-Xh-0bK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4354" y="139"/>
         </scene>
         <!--Shop-->
         <scene sceneID="KS1-NB-Ddu">
             <objects>
                 <navigationController id="4tQ-Xt-33e" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Shop" id="P3H-19-j0V"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ck4-vk-yAv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ck4-vk-yAv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -231,7 +274,7 @@
             <objects>
                 <navigationController id="DPR-Lx-JcL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Cast" id="hfY-4Q-CAo"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PtH-am-9We">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="PtH-am-9We">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -263,4 +306,7 @@
             <point key="canvasLocation" x="879" y="139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="udJ-yS-i2V"/>
+    </inferredMetricsTieBreakers>
 </document>

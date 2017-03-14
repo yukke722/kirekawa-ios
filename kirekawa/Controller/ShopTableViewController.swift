@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+
 
 class ShopTableViewController: UITableViewController {
-    let shops = ["Jumbo", "Cat walk", "Nadeshiko"]
+    var shops: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        callApiGetShops();
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -23,7 +28,6 @@ class ShopTableViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -34,7 +38,6 @@ class ShopTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return shops.count
     }
 
@@ -48,9 +51,7 @@ class ShopTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("shopRow: \(indexPath.row)")
-        
-        let targetViewController = self.storyboard!.instantiateViewController(withIdentifier: "shopSelect")
-        self.present(targetViewController, animated: true, completion: nil)
+        self.performSegue(withIdentifier: "shopSelect", sender: self)
     }
 
     /*
@@ -61,6 +62,28 @@ class ShopTableViewController: UITableViewController {
     }
     */
 
+    func callApiGetShops() {
+        print("callApiGetShops")
+        
+        // APIへ接続するための設定
+        let url = "http://night.kire-kawa.com/api/front/api12"
+        let params = ["job_type": "karaoke"]
+        
+        Alamofire.request(url, method: .post, parameters: params).responseJSON{ response in
+            let json = JSON(response.result.value!)
+            json["shops"].forEach{(_, data) in
+                let shopName = data["name"].string!
+                print(shopName)
+                self.shops.append(shopName)
+            }
+            self.tableView.reloadData()
+
+        }
+
+    }
+    
+
+    
     /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

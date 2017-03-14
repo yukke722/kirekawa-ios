@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B1F3117C322D9F91540C357 /* Pods_kirekawaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1773F51D7430447E005AF768 /* Pods_kirekawaUITests.framework */; };
+		8909A3B41E754BBF007F5937 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; fileRef = 8909A3B31E754BBF007F5937 /* Alamofire */; };
 		89101DAA1E6C3BC3004C56EB /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89101DA91E6C3BC3004C56EB /* Const.swift */; };
 		8990783F1E686D4900D5D3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990783E1E686D4900D5D3CF /* AppDelegate.swift */; };
 		899078411E686D4900D5D3CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899078401E686D4900D5D3CF /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 		89D932E51E6C0D2900CAACB9 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D932E41E6C0D2900CAACB9 /* ShopDetailViewController.swift */; };
 		89D932E71E6C0D3800CAACB9 /* CastDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D932E61E6C0D3800CAACB9 /* CastDetailViewController.swift */; };
 		89D932EA1E6C179600CAACB9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D932E91E6C179600CAACB9 /* MapKit.framework */; };
+		DAB4A4236627FCC0C5F4EE52 /* Pods_kirekawa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558ED42B0A1F4B03E240AC4C /* Pods_kirekawa.framework */; };
+		EBF21A0E7386928D6B3DB7B6 /* Pods_kirekawaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BB23DDDCF9B669CB613356 /* Pods_kirekawaTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09BB23DDDCF9B669CB613356 /* Pods_kirekawaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kirekawaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1773F51D7430447E005AF768 /* Pods_kirekawaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kirekawaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23AA2610CBD621090610EC2D /* Pods-kirekawaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kirekawaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kirekawaUITests/Pods-kirekawaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3504FB1904B28B7753D429A8 /* Pods-kirekawaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kirekawaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kirekawaTests/Pods-kirekawaTests.release.xcconfig"; sourceTree = "<group>"; };
+		558ED42B0A1F4B03E240AC4C /* Pods_kirekawa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kirekawa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8909A3B31E754BBF007F5937 /* Alamofire */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Alamofire; path = Pods/Alamofire; sourceTree = "<group>"; };
 		89101DA91E6C3BC3004C56EB /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		8990783B1E686D4900D5D3CF /* kirekawa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kirekawa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8990783E1E686D4900D5D3CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +73,10 @@
 		89D932E41E6C0D2900CAACB9 /* ShopDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
 		89D932E61E6C0D3800CAACB9 /* CastDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastDetailViewController.swift; sourceTree = "<group>"; };
 		89D932E91E6C179600CAACB9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9BD61470839C4FF6FAFBDBAF /* Pods-kirekawa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kirekawa.release.xcconfig"; path = "Pods/Target Support Files/Pods-kirekawa/Pods-kirekawa.release.xcconfig"; sourceTree = "<group>"; };
+		A263159EBAFB6963D9FEC207 /* Pods-kirekawa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kirekawa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kirekawa/Pods-kirekawa.debug.xcconfig"; sourceTree = "<group>"; };
+		A6E601B37A3161A134859F57 /* Pods-kirekawaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kirekawaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kirekawaUITests/Pods-kirekawaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CDB31574DC19730DC53DD891 /* Pods-kirekawaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kirekawaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kirekawaTests/Pods-kirekawaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +84,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8909A3B41E754BBF007F5937 /* Alamofire in Frameworks */,
 				89D932EA1E6C179600CAACB9 /* MapKit.framework in Frameworks */,
+				DAB4A4236627FCC0C5F4EE52 /* Pods_kirekawa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBF21A0E7386928D6B3DB7B6 /* Pods_kirekawaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B1F3117C322D9F91540C357 /* Pods_kirekawaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				89D932E81E6C179600CAACB9 /* Frameworks */,
+				EEA8C486E68DBE9C986899A8 /* Pods */,
 				8990783C1E686D4900D5D3CF /* Products */,
 				8990783D1E686D4900D5D3CF /* kirekawa */,
 				899078521E686D4A00D5D3CF /* kirekawaTests */,
@@ -170,9 +189,9 @@
 			children = (
 				89101DA31E6C3AC3004C56EB /* Controller */,
 				89101DA41E6C3AD1004C56EB /* Model */,
-				89101DA51E6C3ADD004C56EB /* View */,
 				89101DA71E6C3B05004C56EB /* Resource */,
 				89101DA61E6C3AEE004C56EB /* Util */,
+				89101DA51E6C3ADD004C56EB /* View */,
 				8990783E1E686D4900D5D3CF /* AppDelegate.swift */,
 				899078451E686D4900D5D3CF /* Assets.xcassets */,
 				8990784A1E686D4900D5D3CF /* Info.plist */,
@@ -201,9 +220,26 @@
 		89D932E81E6C179600CAACB9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8909A3B31E754BBF007F5937 /* Alamofire */,
 				89D932E91E6C179600CAACB9 /* MapKit.framework */,
+				558ED42B0A1F4B03E240AC4C /* Pods_kirekawa.framework */,
+				09BB23DDDCF9B669CB613356 /* Pods_kirekawaTests.framework */,
+				1773F51D7430447E005AF768 /* Pods_kirekawaUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEA8C486E68DBE9C986899A8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A263159EBAFB6963D9FEC207 /* Pods-kirekawa.debug.xcconfig */,
+				9BD61470839C4FF6FAFBDBAF /* Pods-kirekawa.release.xcconfig */,
+				CDB31574DC19730DC53DD891 /* Pods-kirekawaTests.debug.xcconfig */,
+				3504FB1904B28B7753D429A8 /* Pods-kirekawaTests.release.xcconfig */,
+				23AA2610CBD621090610EC2D /* Pods-kirekawaUITests.debug.xcconfig */,
+				A6E601B37A3161A134859F57 /* Pods-kirekawaUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,9 +249,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 899078631E686D4A00D5D3CF /* Build configuration list for PBXNativeTarget "kirekawa" */;
 			buildPhases = (
+				A77ABF0754DCB9E7FD259F2C /* [CP] Check Pods Manifest.lock */,
 				899078371E686D4800D5D3CF /* Sources */,
 				899078381E686D4800D5D3CF /* Frameworks */,
 				899078391E686D4800D5D3CF /* Resources */,
+				238E7231B8418523D553AAB2 /* [CP] Embed Pods Frameworks */,
+				DCCC19561840BAC26C243C90 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,9 +269,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 899078661E686D4A00D5D3CF /* Build configuration list for PBXNativeTarget "kirekawaTests" */;
 			buildPhases = (
+				2BC9ED3A9EB00025012804BC /* [CP] Check Pods Manifest.lock */,
 				8990784B1E686D4A00D5D3CF /* Sources */,
 				8990784C1E686D4A00D5D3CF /* Frameworks */,
 				8990784D1E686D4A00D5D3CF /* Resources */,
+				C124E61160C3652DEBDD92AA /* [CP] Embed Pods Frameworks */,
+				F9E8AE8B3D55188305C75DFF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,9 +290,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 899078691E686D4A00D5D3CF /* Build configuration list for PBXNativeTarget "kirekawaUITests" */;
 			buildPhases = (
+				491C794C72E36CA997392DDF /* [CP] Check Pods Manifest.lock */,
 				899078561E686D4A00D5D3CF /* Sources */,
 				899078571E686D4A00D5D3CF /* Frameworks */,
 				899078581E686D4A00D5D3CF /* Resources */,
+				B28C9BC19DC04FD198144613 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -335,6 +379,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		238E7231B8418523D553AAB2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kirekawa/Pods-kirekawa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2BC9ED3A9EB00025012804BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		491C794C72E36CA997392DDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A77ABF0754DCB9E7FD259F2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B28C9BC19DC04FD198144613 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kirekawaUITests/Pods-kirekawaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C124E61160C3652DEBDD92AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kirekawaTests/Pods-kirekawaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCCC19561840BAC26C243C90 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kirekawa/Pods-kirekawa-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9E8AE8B3D55188305C75DFF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kirekawaTests/Pods-kirekawaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		899078371E686D4800D5D3CF /* Sources */ = {
@@ -499,6 +666,7 @@
 		};
 		899078641E686D4A00D5D3CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A263159EBAFB6963D9FEC207 /* Pods-kirekawa.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U37DS9U467;
@@ -513,6 +681,7 @@
 		};
 		899078651E686D4A00D5D3CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BD61470839C4FF6FAFBDBAF /* Pods-kirekawa.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U37DS9U467;
@@ -527,6 +696,7 @@
 		};
 		899078671E686D4A00D5D3CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A263159EBAFB6963D9FEC207 /* Pods-kirekawa.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -541,6 +711,7 @@
 		};
 		899078681E686D4A00D5D3CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BD61470839C4FF6FAFBDBAF /* Pods-kirekawa.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -555,6 +726,7 @@
 		};
 		8990786A1E686D4A00D5D3CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A263159EBAFB6963D9FEC207 /* Pods-kirekawa.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = kirekawaUITests/Info.plist;
@@ -568,6 +740,7 @@
 		};
 		8990786B1E686D4A00D5D3CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BD61470839C4FF6FAFBDBAF /* Pods-kirekawa.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = kirekawaUITests/Info.plist;

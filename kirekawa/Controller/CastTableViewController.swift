@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class CastTableViewController: UITableViewController {
-    let casts = ["Mai", "Sakura", "Phan"]
+    var casts: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        callApiGetCasts();
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -23,7 +27,6 @@ class CastTableViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -34,7 +37,6 @@ class CastTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return casts.count
     }
 
@@ -49,9 +51,30 @@ class CastTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("castRow: \(indexPath.row)")
         
-        let targetViewController = self.storyboard!.instantiateViewController(withIdentifier: "castSelect")
-        self.present(targetViewController, animated: true, completion: nil)
+        self.performSegue(withIdentifier: "castSelect", sender: self)
     }
+    
+    func callApiGetCasts() {
+        print("callApiGetCasts")
+        
+        // APIへ接続するための設定
+        let url = "http://night.kire-kawa.com/api/front/api2"
+        let params = ["job_type": "karaoke"]
+        
+        Alamofire.request(url, method: .post, parameters: params).responseJSON{ response in
+            let json = JSON(response.result.value!)
+            json["users"].forEach{(_, data) in
+                let castName = data["name"].string!
+                print(castName)
+                self.casts.append(castName)
+            }
+            self.tableView.reloadData()
+            
+        }
+        
+    }
+
+    
     
     /*
     // Override to support conditional editing of the table view.
