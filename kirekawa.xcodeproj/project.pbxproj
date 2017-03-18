@@ -24,6 +24,8 @@
 		89D932E51E6C0D2900CAACB9 /* ShopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D932E41E6C0D2900CAACB9 /* ShopDetailViewController.swift */; };
 		89D932E71E6C0D3800CAACB9 /* CastDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D932E61E6C0D3800CAACB9 /* CastDetailViewController.swift */; };
 		89D932EA1E6C179600CAACB9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D932E91E6C179600CAACB9 /* MapKit.framework */; };
+		89E3FABB1E79A49E00FCDA27 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3FABA1E79A49E00FCDA27 /* Shop.swift */; };
+		89E3FABD1E79A9FC00FCDA27 /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E3FABC1E79A9FC00FCDA27 /* Cast.swift */; };
 		DAB4A4236627FCC0C5F4EE52 /* Pods_kirekawa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 558ED42B0A1F4B03E240AC4C /* Pods_kirekawa.framework */; };
 		EBF21A0E7386928D6B3DB7B6 /* Pods_kirekawaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09BB23DDDCF9B669CB613356 /* Pods_kirekawaTests.framework */; };
 /* End PBXBuildFile section */
@@ -73,6 +75,8 @@
 		89D932E41E6C0D2900CAACB9 /* ShopDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailViewController.swift; sourceTree = "<group>"; };
 		89D932E61E6C0D3800CAACB9 /* CastDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastDetailViewController.swift; sourceTree = "<group>"; };
 		89D932E91E6C179600CAACB9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		89E3FABA1E79A49E00FCDA27 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shop.swift; path = kirekawa/Shop.swift; sourceTree = SOURCE_ROOT; };
+		89E3FABC1E79A9FC00FCDA27 /* Cast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cast.swift; path = kirekawa/Cast.swift; sourceTree = SOURCE_ROOT; };
 		9BD61470839C4FF6FAFBDBAF /* Pods-kirekawa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kirekawa.release.xcconfig"; path = "Pods/Target Support Files/Pods-kirekawa/Pods-kirekawa.release.xcconfig"; sourceTree = "<group>"; };
 		A263159EBAFB6963D9FEC207 /* Pods-kirekawa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kirekawa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kirekawa/Pods-kirekawa.debug.xcconfig"; sourceTree = "<group>"; };
 		A6E601B37A3161A134859F57 /* Pods-kirekawaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kirekawaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-kirekawaUITests/Pods-kirekawaUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 		89101DA41E6C3AD1004C56EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				89E3FABA1E79A49E00FCDA27 /* Shop.swift */,
+				89E3FABC1E79A9FC00FCDA27 /* Cast.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -511,10 +517,12 @@
 				899078411E686D4900D5D3CF /* ViewController.swift in Sources */,
 				8990783F1E686D4900D5D3CF /* AppDelegate.swift in Sources */,
 				89D932E31E6C084F00CAACB9 /* CustomTabBarController.swift in Sources */,
+				89E3FABB1E79A49E00FCDA27 /* Shop.swift in Sources */,
 				89D932DF1E6BFC6E00CAACB9 /* CastTableViewController.swift in Sources */,
 				89D932E51E6C0D2900CAACB9 /* ShopDetailViewController.swift in Sources */,
 				89D932E11E6C02F300CAACB9 /* MapViewController.swift in Sources */,
 				89D932E71E6C0D3800CAACB9 /* CastDetailViewController.swift in Sources */,
+				89E3FABD1E79A9FC00FCDA27 /* Cast.swift in Sources */,
 				89D932DD1E6BFC5500CAACB9 /* ShopTableViewController.swift in Sources */,
 				89101DAA1E6C3BC3004C56EB /* Const.swift in Sources */,
 			);

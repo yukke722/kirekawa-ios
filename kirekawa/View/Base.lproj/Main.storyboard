@@ -27,7 +27,7 @@
                                 <state key="normal" title="同意する"/>
                                 <connections>
                                     <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MpS-EN-eFc"/>
-                                    <segue destination="Kgr-pW-9gv" kind="show" id="hmH-6v-CVN"/>
+                                    <segue destination="Kgr-pW-9gv" kind="show" identifier="toMain" id="hmH-6v-CVN"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uqi-ay-RC3" userLabel="header">
@@ -114,28 +114,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cast Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldr-kE-fEj">
-                                <rect key="frame" x="145" y="208" width="84" height="21"/>
+                                <rect key="frame" x="74" y="159" width="258" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHh-VL-AvG">
-                                <rect key="frame" x="156" y="458" width="62" height="30"/>
+                                <rect key="frame" x="67" y="420" width="237" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="店舗情報"/>
                                 <connections>
-                                    <segue destination="cd2-Ms-lZG" kind="show" id="udJ-yS-i2V"/>
+                                    <segue destination="cd2-Ms-lZG" kind="show" identifier="toShopDetail" id="x7j-sd-ZQt"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Cast Name" id="mQV-RB-gDh"/>
+                    <connections>
+                        <outlet property="btnToShop" destination="hHh-VL-AvG" id="Vlo-3i-Wa5"/>
+                        <outlet property="lblId" destination="Ldr-kE-fEj" id="056-ka-D9x"/>
+                        <outlet property="navBar" destination="mQV-RB-gDh" id="SRW-hk-Y1r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9MH-DI-G0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3425" y="-582"/>
+            <point key="canvasLocation" x="3424.8000000000002" y="-583.3583208395803"/>
         </scene>
         <!--Shop-->
         <scene sceneID="rdO-x7-x0s">
@@ -181,55 +186,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shop Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUn-H3-r9B">
-                                <rect key="frame" x="143" y="220" width="88" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkg-bn-e2o">
+                                <rect key="frame" x="52" y="382" width="156" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCf-PJ-C72">
-                                <rect key="frame" x="149" y="426" width="77" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2WS-oC-FDw">
+                                <rect key="frame" x="166" y="148" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="問い合わせ"/>
-                                <connections>
-                                    <segue destination="4k3-35-pGV" kind="push" id="IWM-sp-6I9"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Shop Name" id="7hg-vg-haB"/>
+                    <connections>
+                        <outlet property="lblId" destination="2WS-oC-FDw" id="Llu-6z-Oar"/>
+                        <outlet property="lblTel" destination="dkg-bn-e2o" id="W43-gH-GI0"/>
+                        <outlet property="navBar" destination="7hg-vg-haB" id="jFA-Ou-lT6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLA-PO-quV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3425" y="139"/>
-        </scene>
-        <!--Contact-->
-        <scene sceneID="TMj-8r-Woe">
-            <objects>
-                <viewController id="4k3-35-pGV" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mjL-aY-MOu"/>
-                        <viewControllerLayoutGuide type="bottom" id="9dc-wm-3Pw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="dc9-qO-eOY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Contact" id="kil-YS-yLd"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IRu-Xh-0bK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4354" y="139"/>
+            <point key="canvasLocation" x="3424.8000000000002" y="138.98050974512745"/>
         </scene>
         <!--Shop-->
         <scene sceneID="KS1-NB-Ddu">
             <objects>
                 <navigationController id="4tQ-Xt-33e" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Shop" id="P3H-19-j0V"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ck4-vk-yAv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ck4-vk-yAv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -274,7 +264,7 @@
             <objects>
                 <navigationController id="DPR-Lx-JcL" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Cast" id="hfY-4Q-CAo"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="PtH-am-9We">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PtH-am-9We">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -307,6 +297,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="udJ-yS-i2V"/>
+        <segue reference="x7j-sd-ZQt"/>
     </inferredMetricsTieBreakers>
 </document>

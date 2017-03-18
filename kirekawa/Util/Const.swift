@@ -10,4 +10,6 @@ import Foundation
 
 struct Const {
     static let kKirekawa = "キレカワ"
+    
+    static let baseUrl = "http://night.kire-kawa.com/"
 }

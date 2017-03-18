@@ -7,13 +7,25 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ShopDetailViewController: UIViewController {
-
+    @IBOutlet weak var navBar: UINavigationItem!
+    @IBOutlet weak var lblId: UILabel!
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblTel: UILabel!
+    
+    var shop: Shop!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navBar.title = shop.name
+        
+//        callApiGetShopDetail();
+        lblId.text = "\(shop.id)"
+        lblTel.text = shop.tel
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +34,26 @@ class ShopDetailViewController: UIViewController {
     }
     
 
+//    func callApiGetShopDetail() {
+//        print("callApiGetShopDetail")
+//        
+//        let url = "http://night.kire-kawa.com/api/front/api4"
+//        let params = ["id": shopId!]
+//        
+//        Alamofire.request(url, method: .get, parameters: params).responseJSON{ response in
+//            let json = JSON(response.result.value!)
+//            json["shops"].forEach{(_, data) in
+//                let id = data["id"].int!
+//                let name = data["name"].string!
+//                let tel = data["tel"].string!
+//                self.shop = ShopDetail(id: id, name: name, tel: tel)
+//            }
+//            
+//        }
+//        
+//    }
+
+    
     /*
     // MARK: - Navigation
 

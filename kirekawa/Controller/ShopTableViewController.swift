@@ -12,7 +12,8 @@ import SwiftyJSON
 
 
 class ShopTableViewController: UITableViewController {
-    var shops: [String] = []
+    var shops = [Shop]()
+    var shop: Shop?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,16 +45,27 @@ class ShopTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShopCell", for: indexPath)
 
-        cell.textLabel?.text = shops[indexPath.row]
+        cell.textLabel?.text = "id: \(shops[indexPath.row].id) / " + shops[indexPath.row].name
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("shopRow: \(indexPath.row)")
-        self.performSegue(withIdentifier: "shopSelect", sender: self)
+        shop = self.shops[indexPath.row]
+        
+        if shop != nil {
+            self.performSegue(withIdentifier: "shopSelect", sender: nil)
+        }
     }
 
+    // Segue 準備
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "shopSelect") {
+            let shopDVC: ShopDetailViewController = (segue.destination as? ShopDetailViewController)!
+            shopDVC.shop = shop!
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -63,7 +75,6 @@ class ShopTableViewController: UITableViewController {
     */
 
     func callApiGetShops() {
-        print("callApiGetShops")
         
         // APIへ接続するための設定
         let url = "http://night.kire-kawa.com/api/front/api12"
@@ -72,9 +83,7 @@ class ShopTableViewController: UITableViewController {
         Alamofire.request(url, method: .post, parameters: params).responseJSON{ response in
             let json = JSON(response.result.value!)
             json["shops"].forEach{(_, data) in
-                let shopName = data["name"].string!
-                print(shopName)
-                self.shops.append(shopName)
+                self.shops.append(Shop.init(data: data))
             }
             self.tableView.reloadData()
 
@@ -108,16 +117,6 @@ class ShopTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
     */
 

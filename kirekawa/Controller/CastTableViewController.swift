@@ -11,7 +11,8 @@ import Alamofire
 import SwiftyJSON
 
 class CastTableViewController: UITableViewController {
-    var casts: [String] = []
+    var casts = [Cast]()
+    var cast: Cast?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,19 +44,27 @@ class CastTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CastCell", for: indexPath)
 
-        cell.textLabel?.text = casts[indexPath.row]
+        cell.textLabel?.text = "id: \(casts[indexPath.row].id) / " + casts[indexPath.row].name
 
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("castRow: \(indexPath.row)")
-        
-        self.performSegue(withIdentifier: "castSelect", sender: self)
+        cast = casts[indexPath.row]
+        if cast != nil {
+            self.performSegue(withIdentifier: "castSelect", sender: nil)
+        }
+    }
+    
+    // Segue 準備
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "castSelect") {
+            let castDVC: CastDetailViewController = (segue.destination as? CastDetailViewController)!
+            castDVC.cast = cast!
+        }
     }
     
     func callApiGetCasts() {
-        print("callApiGetCasts")
         
         // APIへ接続するための設定
         let url = "http://night.kire-kawa.com/api/front/api2"
@@ -64,9 +73,7 @@ class CastTableViewController: UITableViewController {
         Alamofire.request(url, method: .post, parameters: params).responseJSON{ response in
             let json = JSON(response.result.value!)
             json["users"].forEach{(_, data) in
-                let castName = data["name"].string!
-                print(castName)
-                self.casts.append(castName)
+                self.casts.append(Cast.init(data: data))
             }
             self.tableView.reloadData()
             

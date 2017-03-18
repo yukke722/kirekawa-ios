@@ -19,11 +19,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /* 一度同意したら次から表示しない */
-        if ((userDefaults.object(forKey: "isRedAboutKirekawa")) != nil) {
-            print("intent next page")
-        }
-        
         desc.text = "\(Const.kKirekawa)"
 
         /* btn 
@@ -48,6 +43,18 @@ class ViewController: UIViewController {
         )
         
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        /* 一度同意したら次から表示しない */
+        if ((userDefaults.object(forKey: "isRedAboutKirekawa")) != nil) {
+            let storyboard: UIStoryboard = self.storyboard!
+            let nextView = storyboard.instantiateViewController(withIdentifier: "TabBar")
+            present(nextView, animated: true, completion: nil)
+//            performSegue(withIdentifier: "TabBar", sender: nil)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -60,7 +67,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func switchChanged(_ sender: UISwitch) {
-        print(isRedSwitch.isOn)
         
         if (isRedSwitch.isOn) {
             desc.text = "キレカワに同意しました"
