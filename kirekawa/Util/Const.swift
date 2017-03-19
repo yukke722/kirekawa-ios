@@ -10,6 +10,10 @@ import Foundation
 
 struct Const {
     static let kKirekawa = "キレカワ"
-    
     static let baseUrl = "http://night.kire-kawa.com/"
+    
+    static let jobTypes: [String : String] = ["karaoke" : "カラオケ",
+                                              "bar" : "バー",
+                                              "massage" : "マッサージ"]
+
 }

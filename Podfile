@@ -5,8 +5,9 @@ use_frameworks!
 target 'kirekawa' do
 
   pod 'Alamofire'
+  pod 'AlamofireNetworkActivityIndicator'
   pod 'SwiftyJSON'
-
+  pod 'BTNavigationDropdownMenu', :git => 'https://github.com/PhamBaTho/BTNavigationDropdownMenu.git', :branch => 'swift-3.0'
   # Pods for kirekawa
 
   target 'kirekawaTests' do

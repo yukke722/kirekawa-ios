@@ -39,7 +39,7 @@ class CastDetailViewController: UIViewController {
     }
     
         func callApiGetShopDetail() {
-    
+
             let url = "http://night.kire-kawa.com/api/front/api4"
             let params = ["id": cast.shopId]
     
@@ -72,7 +72,8 @@ class CastDetailViewController: UIViewController {
         }
     }
 
-
+    
+    
     /*
     // MARK: - Navigation
 

@@ -9,15 +9,21 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import BTNavigationDropdownMenu
+
 
 class CastTableViewController: UITableViewController {
+    var menuView: BTNavigationDropdownMenu!
+
     var casts = [Cast]()
     var cast: Cast?
+    var jobType = [String](Const.jobTypes.keys)[0]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setMenuView()
 
-        callApiGetCasts();
+        callApiGetCasts(jobType: jobType);
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -64,11 +70,12 @@ class CastTableViewController: UITableViewController {
         }
     }
     
-    func callApiGetCasts() {
+    func callApiGetCasts(jobType: String) {
         
         // APIへ接続するための設定
         let url = "http://night.kire-kawa.com/api/front/api2"
-        let params = ["job_type": "karaoke"]
+        let params = ["job_type": jobType]
+        self.casts = [Cast]()
         
         Alamofire.request(url, method: .post, parameters: params).responseJSON{ response in
             let json = JSON(response.result.value!)
@@ -81,7 +88,20 @@ class CastTableViewController: UITableViewController {
         
     }
 
-    
+    /* setMenuView */
+    func setMenuView() {
+        
+        menuView = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: [String](Const.jobTypes.values)[0], items: [String](Const.jobTypes.values) as [AnyObject])
+        self.navigationItem.titleView = menuView
+        
+        //        menuView.arrowImage = ""
+        menuView.arrowPadding = 15
+        menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
+            self?.jobType = [String](Const.jobTypes.keys)[indexPath]
+            self?.title = [String](Const.jobTypes.values)[indexPath]
+            self?.callApiGetCasts(jobType: (self?.jobType)!);
+        }
+    }
     
     /*
     // Override to support conditional editing of the table view.

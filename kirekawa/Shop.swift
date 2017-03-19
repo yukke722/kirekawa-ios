@@ -20,7 +20,6 @@ class Shop {
         self.id = data["id"].int!
         self.name = data["name"].string!
         self.tel = data["tel"].string!
-        print("shopInit: \(self)")
     }
     
     

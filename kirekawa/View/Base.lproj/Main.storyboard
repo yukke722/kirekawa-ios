@@ -288,7 +288,6 @@
                     <connections>
                         <segue destination="DPR-Lx-JcL" kind="relationship" relationship="viewControllers" id="l1E-7i-fHT"/>
                         <segue destination="4tQ-Xt-33e" kind="relationship" relationship="viewControllers" id="mq9-x5-Dxd"/>
-                        <segue destination="VDZ-UF-SyJ" kind="relationship" relationship="viewControllers" id="4qF-B9-4sC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUk-S5-PT0" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -704,7 +704,7 @@
 		};
 		899078671E686D4A00D5D3CF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A263159EBAFB6963D9FEC207 /* Pods-kirekawa.debug.xcconfig */;
+			baseConfigurationReference = CDB31574DC19730DC53DD891 /* Pods-kirekawaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -719,7 +719,7 @@
 		};
 		899078681E686D4A00D5D3CF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BD61470839C4FF6FAFBDBAF /* Pods-kirekawa.release.xcconfig */;
+			baseConfigurationReference = 3504FB1904B28B7753D429A8 /* Pods-kirekawaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -734,7 +734,7 @@
 		};
 		8990786A1E686D4A00D5D3CF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A263159EBAFB6963D9FEC207 /* Pods-kirekawa.debug.xcconfig */;
+			baseConfigurationReference = 23AA2610CBD621090610EC2D /* Pods-kirekawaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = kirekawaUITests/Info.plist;
@@ -748,7 +748,7 @@
 		};
 		8990786B1E686D4A00D5D3CF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BD61470839C4FF6FAFBDBAF /* Pods-kirekawa.release.xcconfig */;
+			baseConfigurationReference = A6E601B37A3161A134859F57 /* Pods-kirekawaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = kirekawaUITests/Info.plist;

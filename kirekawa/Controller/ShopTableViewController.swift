@@ -9,16 +9,21 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import BTNavigationDropdownMenu
 
 
 class ShopTableViewController: UITableViewController {
+    var menuView: BTNavigationDropdownMenu!
+    
     var shops = [Shop]()
     var shop: Shop?
+    var jobType = [String](Const.jobTypes.keys)[0]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        callApiGetShops();
+
+        setMenuView()
+        callApiGetShops(jobType: jobType);
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -74,11 +79,12 @@ class ShopTableViewController: UITableViewController {
     }
     */
 
-    func callApiGetShops() {
+    func callApiGetShops(jobType: String) {
         
         // APIへ接続するための設定
         let url = "http://night.kire-kawa.com/api/front/api12"
-        let params = ["job_type": "karaoke"]
+        let params = ["job_type": jobType]
+        self.shops = [Shop]()
         
         Alamofire.request(url, method: .post, parameters: params).responseJSON{ response in
             let json = JSON(response.result.value!)
@@ -86,12 +92,25 @@ class ShopTableViewController: UITableViewController {
                 self.shops.append(Shop.init(data: data))
             }
             self.tableView.reloadData()
-
         }
-
+        
     }
     
-
+    /* setMenuView */
+    func setMenuView() {
+        
+        menuView = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: [String](Const.jobTypes.values)[0], items: [String](Const.jobTypes.values) as [AnyObject])
+        self.navigationItem.titleView = menuView
+        
+//        menuView.arrowImage = ""
+        menuView.arrowPadding = 15
+        menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
+            self?.jobType = [String](Const.jobTypes.keys)[indexPath]
+            self?.title = [String](Const.jobTypes.values)[indexPath]
+            self?.callApiGetShops(jobType: (self?.jobType)!);
+        }
+    }
+    
     
     /*
     // Override to support editing the table view.
