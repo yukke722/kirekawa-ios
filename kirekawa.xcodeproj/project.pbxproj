@@ -10,6 +10,7 @@
 		4B1F3117C322D9F91540C357 /* Pods_kirekawaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1773F51D7430447E005AF768 /* Pods_kirekawaUITests.framework */; };
 		8909A3B41E754BBF007F5937 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; fileRef = 8909A3B31E754BBF007F5937 /* Alamofire */; };
 		89101DAA1E6C3BC3004C56EB /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89101DA91E6C3BC3004C56EB /* Const.swift */; };
+		8954771A1E89718200A1E595 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895477191E89718200A1E595 /* WebViewController.swift */; };
 		8990783F1E686D4900D5D3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990783E1E686D4900D5D3CF /* AppDelegate.swift */; };
 		899078411E686D4900D5D3CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899078401E686D4900D5D3CF /* ViewController.swift */; };
 		899078441E686D4900D5D3CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899078421E686D4900D5D3CF /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 		899078491E686D4900D5D3CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899078471E686D4900D5D3CF /* LaunchScreen.storyboard */; };
 		899078541E686D4A00D5D3CF /* kirekawaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899078531E686D4A00D5D3CF /* kirekawaTests.swift */; };
 		8990785F1E686D4A00D5D3CF /* kirekawaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990785E1E686D4A00D5D3CF /* kirekawaUITests.swift */; };
+		899DE99B1E86E048001725AB /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899DE99A1E86E048001725AB /* SettingTableViewController.swift */; };
 		89D932DD1E6BFC5500CAACB9 /* ShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D932DC1E6BFC5500CAACB9 /* ShopTableViewController.swift */; };
 		89D932DF1E6BFC6E00CAACB9 /* CastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D932DE1E6BFC6E00CAACB9 /* CastTableViewController.swift */; };
 		89D932E11E6C02F300CAACB9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D932E01E6C02F300CAACB9 /* MapViewController.swift */; };
@@ -55,6 +57,7 @@
 		558ED42B0A1F4B03E240AC4C /* Pods_kirekawa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kirekawa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8909A3B31E754BBF007F5937 /* Alamofire */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Alamofire; path = Pods/Alamofire; sourceTree = "<group>"; };
 		89101DA91E6C3BC3004C56EB /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		895477191E89718200A1E595 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		8990783B1E686D4900D5D3CF /* kirekawa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kirekawa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8990783E1E686D4900D5D3CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		899078401E686D4900D5D3CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 		8990785A1E686D4A00D5D3CF /* kirekawaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kirekawaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8990785E1E686D4A00D5D3CF /* kirekawaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kirekawaUITests.swift; sourceTree = "<group>"; };
 		899078601E686D4A00D5D3CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		899DE99A1E86E048001725AB /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		89D932DC1E6BFC5500CAACB9 /* ShopTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopTableViewController.swift; sourceTree = "<group>"; };
 		89D932DE1E6BFC6E00CAACB9 /* CastTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastTableViewController.swift; sourceTree = "<group>"; };
 		89D932E01E6C02F300CAACB9 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				89D932E41E6C0D2900CAACB9 /* ShopDetailViewController.swift */,
 				89D932DC1E6BFC5500CAACB9 /* ShopTableViewController.swift */,
 				899078401E686D4900D5D3CF /* ViewController.swift */,
+				899DE99A1E86E048001725AB /* SettingTableViewController.swift */,
+				895477191E89718200A1E595 /* WebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -318,6 +324,9 @@
 		899078331E686D4800D5D3CF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					aaaa,
+				);
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Yusuke Hashimoto";
@@ -514,6 +523,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				899DE99B1E86E048001725AB /* SettingTableViewController.swift in Sources */,
 				899078411E686D4900D5D3CF /* ViewController.swift in Sources */,
 				8990783F1E686D4900D5D3CF /* AppDelegate.swift in Sources */,
 				89D932E31E6C084F00CAACB9 /* CustomTabBarController.swift in Sources */,
@@ -524,6 +534,7 @@
 				89D932E71E6C0D3800CAACB9 /* CastDetailViewController.swift in Sources */,
 				89E3FABD1E79A9FC00FCDA27 /* Cast.swift in Sources */,
 				89D932DD1E6BFC5500CAACB9 /* ShopTableViewController.swift in Sources */,
+				8954771A1E89718200A1E595 /* WebViewController.swift in Sources */,
 				89101DAA1E6C3BC3004C56EB /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
