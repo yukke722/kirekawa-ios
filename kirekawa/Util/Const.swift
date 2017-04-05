@@ -10,11 +10,11 @@ import Foundation
 
 struct Const {
     static let kKirekawa = "キレカワ"
-    static let baseUrl = "http://night.kire-kawa.com/"
+    static let baseUrl = "http://night.kire-kawa.com"
     static let settingPaths:
-        [String : String] = ["利用規約" : "terms",
-                             "プライバシーポリシー" : "policy",
-                             "お問い合わせ" : "contact"
+        [String : String] = ["利用規約" : "/terms",
+                             "プライバシーポリシー" : "/policy",
+                             "お問い合わせ" : "/contact"
     ]
     
     static let jobTypes:

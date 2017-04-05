@@ -21,6 +21,8 @@ class CastTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let nib = UINib(nibName: "CastCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "CastCell")
         setMenuView()
 
         callApiGetCasts(jobType: jobType);
@@ -48,10 +50,14 @@ class CastTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CastCell", for: indexPath)
-
-        cell.textLabel?.text = "id: \(casts[indexPath.row].id) / " + casts[indexPath.row].name
-
+        let cell: CastCell = tableView.dequeueReusableCell(withIdentifier: "CastCell", for: indexPath) as! CastCell
+        let cast = casts[indexPath.row]
+        
+        cell.shopName?.text = "\(cast.shopName)"
+        cell.nameAge?.text = cast.nickName + "（" + cast.age + "）"
+        if cast.pictureUrl != "" {
+            cell.picture?.imageFromUrl(link: Const.baseUrl + cast.pictureUrl)
+        }
         return cell
     }
 

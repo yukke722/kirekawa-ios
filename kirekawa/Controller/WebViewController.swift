@@ -46,7 +46,6 @@ class WebViewController: UIViewController {
     }
     */
     @IBAction func dismissModal(_ sender: Any) {
-        print("click!")
         dismiss(animated: true, completion: nil)
     }
 

@@ -21,6 +21,8 @@ class ShopTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let nib = UINib(nibName: "ShopCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "ShopCell")
 
         setMenuView()
         callApiGetShops(jobType: jobType);
@@ -48,10 +50,16 @@ class ShopTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ShopCell", for: indexPath)
-
-        cell.textLabel?.text = "id: \(shops[indexPath.row].id) / " + shops[indexPath.row].name
-
+        let cell: ShopCell = tableView.dequeueReusableCell(withIdentifier: "ShopCell", for: indexPath) as! ShopCell
+        let shop = shops[indexPath.row]
+        
+        cell.name?.text = shop.name
+        cell.score?.text = "\(shop.score)pt"
+        cell.access?.text = shop.access
+        
+        if shop.pictureUrl != "" {
+            cell.picture?.imageFromUrl(link: Const.baseUrl + shop.pictureUrl)
+        }
         return cell
     }
     

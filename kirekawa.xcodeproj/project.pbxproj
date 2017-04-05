@@ -11,6 +11,12 @@
 		8909A3B41E754BBF007F5937 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; fileRef = 8909A3B31E754BBF007F5937 /* Alamofire */; };
 		89101DAA1E6C3BC3004C56EB /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89101DA91E6C3BC3004C56EB /* Const.swift */; };
 		8954771A1E89718200A1E595 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895477191E89718200A1E595 /* WebViewController.swift */; };
+		8986E0521E8FE3E300C7499A /* CastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986E0501E8FE3E300C7499A /* CastCell.swift */; };
+		8986E0531E8FE3E300C7499A /* CastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8986E0511E8FE3E300C7499A /* CastCell.xib */; };
+		8986E0561E8FE3FE00C7499A /* ShopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986E0541E8FE3FE00C7499A /* ShopCell.swift */; };
+		8986E0571E8FE3FE00C7499A /* ShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8986E0551E8FE3FE00C7499A /* ShopCell.xib */; };
+		8986E0591E9014BF00C7499A /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986E0581E9014BF00C7499A /* Util.swift */; };
+		8986E05C1E90C64C00C7499A /* UIImageView+imageFromUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8986E05B1E90C64C00C7499A /* UIImageView+imageFromUrl.swift */; };
 		8990783F1E686D4900D5D3CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8990783E1E686D4900D5D3CF /* AppDelegate.swift */; };
 		899078411E686D4900D5D3CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899078401E686D4900D5D3CF /* ViewController.swift */; };
 		899078441E686D4900D5D3CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899078421E686D4900D5D3CF /* Main.storyboard */; };
@@ -58,6 +64,12 @@
 		8909A3B31E754BBF007F5937 /* Alamofire */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Alamofire; path = Pods/Alamofire; sourceTree = "<group>"; };
 		89101DA91E6C3BC3004C56EB /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		895477191E89718200A1E595 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		8986E0501E8FE3E300C7499A /* CastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastCell.swift; sourceTree = "<group>"; };
+		8986E0511E8FE3E300C7499A /* CastCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CastCell.xib; sourceTree = "<group>"; };
+		8986E0541E8FE3FE00C7499A /* ShopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopCell.swift; sourceTree = "<group>"; };
+		8986E0551E8FE3FE00C7499A /* ShopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopCell.xib; sourceTree = "<group>"; };
+		8986E0581E9014BF00C7499A /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		8986E05B1E90C64C00C7499A /* UIImageView+imageFromUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+imageFromUrl.swift"; sourceTree = "<group>"; };
 		8990783B1E686D4900D5D3CF /* kirekawa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kirekawa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8990783E1E686D4900D5D3CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		899078401E686D4900D5D3CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +159,10 @@
 			children = (
 				899078471E686D4900D5D3CF /* LaunchScreen.storyboard */,
 				899078421E686D4900D5D3CF /* Main.storyboard */,
+				8986E0501E8FE3E300C7499A /* CastCell.swift */,
+				8986E0511E8FE3E300C7499A /* CastCell.xib */,
+				8986E0541E8FE3FE00C7499A /* ShopCell.swift */,
+				8986E0551E8FE3FE00C7499A /* ShopCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -155,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				89101DA91E6C3BC3004C56EB /* Const.swift */,
+				8986E0581E9014BF00C7499A /* Util.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -172,6 +189,14 @@
 			children = (
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		8986E05A1E90C5E800C7499A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8986E05B1E90C64C00C7499A /* UIImageView+imageFromUrl.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		899078321E686D4800D5D3CF = {
@@ -199,6 +224,7 @@
 		8990783D1E686D4900D5D3CF /* kirekawa */ = {
 			isa = PBXGroup;
 			children = (
+				8986E05A1E90C5E800C7499A /* Extension */,
 				89101DA31E6C3AC3004C56EB /* Controller */,
 				89101DA41E6C3AD1004C56EB /* Model */,
 				89101DA71E6C3B05004C56EB /* Resource */,
@@ -373,8 +399,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8986E0531E8FE3E300C7499A /* CastCell.xib in Resources */,
 				899078491E686D4900D5D3CF /* LaunchScreen.storyboard in Resources */,
 				899078461E686D4900D5D3CF /* Assets.xcassets in Resources */,
+				8986E0571E8FE3FE00C7499A /* ShopCell.xib in Resources */,
 				899078441E686D4900D5D3CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,15 +554,19 @@
 				899DE99B1E86E048001725AB /* SettingTableViewController.swift in Sources */,
 				899078411E686D4900D5D3CF /* ViewController.swift in Sources */,
 				8990783F1E686D4900D5D3CF /* AppDelegate.swift in Sources */,
+				8986E0591E9014BF00C7499A /* Util.swift in Sources */,
 				89D932E31E6C084F00CAACB9 /* CustomTabBarController.swift in Sources */,
+				8986E0561E8FE3FE00C7499A /* ShopCell.swift in Sources */,
 				89E3FABB1E79A49E00FCDA27 /* Shop.swift in Sources */,
 				89D932DF1E6BFC6E00CAACB9 /* CastTableViewController.swift in Sources */,
+				8986E0521E8FE3E300C7499A /* CastCell.swift in Sources */,
 				89D932E51E6C0D2900CAACB9 /* ShopDetailViewController.swift in Sources */,
 				89D932E11E6C02F300CAACB9 /* MapViewController.swift in Sources */,
 				89D932E71E6C0D3800CAACB9 /* CastDetailViewController.swift in Sources */,
 				89E3FABD1E79A9FC00FCDA27 /* Cast.swift in Sources */,
 				89D932DD1E6BFC5500CAACB9 /* ShopTableViewController.swift in Sources */,
 				8954771A1E89718200A1E595 /* WebViewController.swift in Sources */,
+				8986E05C1E90C64C00C7499A /* UIImageView+imageFromUrl.swift in Sources */,
 				89101DAA1E6C3BC3004C56EB /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
