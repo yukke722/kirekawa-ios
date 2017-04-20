@@ -12,9 +12,7 @@ import SwiftyJSON
 
 class ShopDetailViewController: UIViewController {
     @IBOutlet weak var navBar: UINavigationItem!
-    @IBOutlet weak var lblId: UILabel!
-    @IBOutlet weak var lblName: UILabel!
-    @IBOutlet weak var lblTel: UILabel!
+
     
     var shop: Shop!
     
@@ -23,8 +21,6 @@ class ShopDetailViewController: UIViewController {
         navBar.title = shop.name
         
 //        callApiGetShopDetail();
-        lblId.text = "\(shop.id)"
-        lblTel.text = shop.tel
 
     }
 

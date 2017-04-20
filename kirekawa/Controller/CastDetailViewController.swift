@@ -12,8 +12,6 @@ import SwiftyJSON
 
 class CastDetailViewController: UIViewController {
     @IBOutlet weak var navBar: UINavigationItem!
-    @IBOutlet weak var lblId: UILabel!
-    @IBOutlet weak var btnToShop: UIButton!
 
     var cast: Cast!
     var shop: Shop!
@@ -25,13 +23,10 @@ class CastDetailViewController: UIViewController {
         
         /* shopIdが無い時 */
         if cast.shopId == 0 {
-            btnToShop.isHidden = true
         } else {
             callApiGetShopDetail()
-            btnToShop.setTitle(shop.name, for: UIControlState.normal)
         }
         navBar.title = cast.name
-        lblId.text = "\(cast.id)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,7 +35,7 @@ class CastDetailViewController: UIViewController {
     
         func callApiGetShopDetail() {
 
-            let url = "http://night.kire-kawa.com/api/front/api4"
+            let url = Const.baseUrl + "/api/front/api4"
             let params = ["id": cast.shopId]
     
             Alamofire.request(url, method: .get, parameters: params).responseJSON{ response in
